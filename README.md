@@ -5,12 +5,14 @@ This repository includes utilities for logging agent actions.
 ## Logging actions
 
 Use `agent_logger.log_action` to append a timestamped message to `agent.log`.
+You can also read recent log entries with `agent_logger.read_log`.
 A simple example:
 
 ```python
-from agent_logger import log_action
+from agent_logger import log_action, read_log
 
 log_action('Agent started task')
+print(read_log())
 ```
 
 ## Fetching SkyCrypt data
